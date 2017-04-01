@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>PiRata</title>
+    <link rel=stylesheet href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        document.addEventListener('click', function (event) {
+            var target = event.target;
+            if (target.tagName.toLowerCase() == 'a') {
+                var port = target.getAttribute('href').match(/^:(\d+)(.*)/);
+                if (port) {
+                    target.href = port[2];
+                    target.port = port[1];
+                }
+            }
+        }, false);
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#plex").hover(function () {
+                $("body").css("background-color", "#1F1F1F");
+                $("body").css("transition", "1s");
+            });
+        });
+        $(document).ready(function () {
+            $("#deluge").hover(function () {
+                $("body").css("background-color", "#3E6EA5");
+                $("body").css("transition", "1s");
+            });
+        });
+        $(document).ready(function () {
+            $("#couch").hover(function () {
+                $("body").css("background-color", "#A50334");
+                $("body").css("transition", "1s");
+            });
+        });
+        $(document).ready(function () {
+            $("#sick").hover(function () {
+                $("body").css("background-color", "#6299C8");
+                $("body").css("transition", "1s");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <td>
+            <a href="/plex" id="plex" target="principal"><img src="https://image.roku.com/developer_channels/prod/2c2ccf2ef5997ebe154505db00c58b3cfc129b28b07cad0f7c322a077561f7c5.png"></a>
+        </td>
+        <td>
+            <a href="/deluge" id="deluge" target="principal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Deluge-Logo.svg/2000px-Deluge-Logo.svg.png"></a>
+        </td>
+        <td>
+            <a href=":8081/home" id="sick" target="principal"><img src="https://rnxtras.com/wp-content/uploads/edd/2015/08/sickrage_logo.png"></a>
+        </td>
+        <td>
+            <a href=":5050" id="couch" target="principal"><img src="https://raw.githubusercontent.com/ildeon/docker-rpi-couchpotato/master/logo.png"></a>
+        </td>
+    </table>
+    <iframe style="border:none;" name="principal" height="100%" width="100%"> </iframe>
+
+    <body>
+
+</html>

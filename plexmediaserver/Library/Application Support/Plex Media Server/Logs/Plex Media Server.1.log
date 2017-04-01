@@ -1,0 +1,376 @@
+Feb 18, 2017 15:32:08.019 [0x73ddc400] INFO - Plex Media Server v1.3.4.3285-b46e0ea - annapurnatrans PC arm7 - build: linux-annapurnatrans-arm7 readynas6 - GMT 01:00
+Feb 18, 2017 15:32:08.020 [0x73ddc400] INFO - Linux version: 4.4.32v7-aufs (#1 SMP Fri Nov 18 23:17:35 CET 2016), language: es-ES@euro
+Feb 18, 2017 15:32:08.020 [0x73ddc400] INFO - Processor Arm
+Feb 18, 2017 15:32:08.020 [0x73ddc400] INFO - ./Plex Media Server
+Feb 18, 2017 15:32:08.017 [0x746462a0] DEBUG - BPQ: [Idle] -> [Starting]
+Feb 18, 2017 15:32:08.022 [0x746462a0] DEBUG - Opening 20 database sessions to library (com.plexapp.plugins.library), SQLite 3.13.0, threadsafe=1
+Feb 18, 2017 15:32:08.023 [0x746462a0] DEBUG - Installing Library Database from [/usr/lib/plexmediaserver/Resources/com.plexapp.plugins.library.db] to [/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db]
+Feb 18, 2017 15:32:09.332 [0x746462a0] DEBUG - Running migrations.
+Feb 18, 2017 15:32:09.336 [0x746462a0] DEBUG - Running forward migration 20151111185126.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:09.337 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:09.338 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Completed forward migration 20151111185126.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Running forward migration 20150819235734.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:09.408 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:09.409 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:09.410 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:09.410 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: devices
+Feb 18, 2017 15:32:09.412 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: statistics_bandwidth
+Feb 18, 2017 15:32:09.416 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: statistics_media
+Feb 18, 2017 15:32:09.430 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.443 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.458 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.476 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.493 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.506 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.519 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.532 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.546 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.560 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.575 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.590 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.606 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.621 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.637 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.650 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.664 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.677 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.690 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Completed forward migration 20150819235734.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Running forward migration 20160101152400.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:09.703 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:09.704 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:09.705 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:09.705 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:09.705 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: spellfix_metadata_titles
+Feb 18, 2017 15:32:09.708 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: spellfix_tag_titles
+Feb 18, 2017 15:32:09.711 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: fts4_metadata_titles
+Feb 18, 2017 15:32:09.716 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_metadata_titles_before_update
+Feb 18, 2017 15:32:09.717 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_metadata_titles_before_delete
+Feb 18, 2017 15:32:09.718 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_metadata_titles_after_update
+Feb 18, 2017 15:32:09.719 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_metadata_titles_after_insert
+Feb 18, 2017 15:32:09.721 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such table: fts4_tag_titles
+Feb 18, 2017 15:32:09.725 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_tag_titles_before_update
+Feb 18, 2017 15:32:09.727 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_tag_titles_before_delete
+Feb 18, 2017 15:32:09.728 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_tag_titles_after_update
+Feb 18, 2017 15:32:09.729 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such trigger: fts4_tag_titles_after_insert
+Feb 18, 2017 15:32:09.738 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_metadata_items_on_original_title
+Feb 18, 2017 15:32:10.013 [0x731ff400] DEBUG - Job running: '/usr/lib/plexmediaserver/CrashUploader' '--directory=/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Crash Reports/1.3.4.3285-b46e0ea' '--version=1.3.4.3285-b46e0ea' '--platform=linux-annapurnatrans-arm7 (4.4.32v7-aufs (#1 SMP Fri Nov 18 23:17:35 CET 2016))' '--serverUuid=' '--userId=NOUSERID' '--url=https://crashreport.plexapp.com'
+Feb 18, 2017 15:32:10.592 [0x746462a0] DEBUG - Analyzing database.
+Feb 18, 2017 15:32:10.638 [0x746462a0] DEBUG - Vacuuming database.
+Feb 18, 2017 15:32:10.642 [0x729ff400] ERROR - JobManager: child process returned: 1 (Operation not permitted)
+Feb 18, 2017 15:32:12.211 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.226 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.241 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.256 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.271 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.286 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.301 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.317 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.332 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.348 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.365 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.380 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.394 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.409 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.424 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.439 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.453 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.468 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.483 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.496 [0x746462a0] DEBUG - Completed forward migration 20160101152400.
+Feb 18, 2017 15:32:12.496 [0x746462a0] DEBUG - Running forward migration 20160212000000.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:12.497 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:12.498 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:12.502 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_metadata_item_views_on_grandparent_guid
+Feb 18, 2017 15:32:12.550 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.565 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.580 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.594 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.609 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.624 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.639 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.653 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.668 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.683 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.698 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.712 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.727 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.742 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.757 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.772 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.787 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.802 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.817 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.830 [0x746462a0] DEBUG - Completed forward migration 20160212000000.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Running forward migration 20160616000000.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:12.831 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:12.832 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:12.833 [0x746462a0] ERROR - SQLITE3:(nil), 1, duplicate column name: grandparent_guid
+Feb 18, 2017 15:32:12.833 [0x746462a0] ERROR - SQLITE3:(nil), 1, duplicate column name: originally_available_at
+Feb 18, 2017 15:32:12.866 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.881 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.896 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.911 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.925 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.940 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.955 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.970 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.985 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:12.999 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.014 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.029 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.044 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.059 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.073 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.088 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.103 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.118 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.133 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.146 [0x746462a0] DEBUG - Completed forward migration 20160616000000.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Running forward migration 20160610202642.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:13.147 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:13.148 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:13.157 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_synced_metadata_items_parent_id
+Feb 18, 2017 15:32:13.158 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_synced_metadata_items_library_section_id
+Feb 18, 2017 15:32:13.160 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_synced_ancestor_items_parent_id
+Feb 18, 2017 15:32:13.161 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_synced_ancestor_items_state
+Feb 18, 2017 15:32:13.162 [0x746462a0] ERROR - SQLITE3:(nil), 1, no such index: index_synced_library_sections_state
+Feb 18, 2017 15:32:13.184 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.199 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.215 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.230 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.245 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.260 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.275 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.290 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.305 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.320 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.335 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.350 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.366 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.381 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.398 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.413 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.428 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.443 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.458 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.472 [0x746462a0] DEBUG - Completed forward migration 20160610202642.
+Feb 18, 2017 15:32:13.472 [0x746462a0] DEBUG - Running forward migration 20161104000000.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:13.473 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:13.474 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Completed forward migration 20161104000000.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Running forward migration 20161109175500.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:13.515 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:13.516 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:13.517 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:13.517 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:13.552 [0x746462a0] DEBUG - Analyzing database.
+Feb 18, 2017 15:32:13.590 [0x746462a0] DEBUG - Vacuuming database.
+Feb 18, 2017 15:32:13.766 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.782 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.797 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.820 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.850 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.881 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.908 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.923 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.938 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.953 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.969 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.984 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:13.999 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.014 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.029 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.044 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.060 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.075 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.090 [0x746462a0] INFO - SQLITE3:(nil), 17, statement aborts at 57: [select * from metadata_items limit 1] database schema has changed
+Feb 18, 2017 15:32:14.104 [0x746462a0] DEBUG - Completed forward migration 20161109175500.
+Feb 18, 2017 15:32:14.107 [0x746462a0] DEBUG - ChangestampAllocator: initialized to 0
+Feb 18, 2017 15:32:14.194 [0x746462a0] DEBUG - Listening on port 32400 with queue of 128 connections.
+Feb 18, 2017 15:32:14.195 [0x746462a0] DEBUG - Listening on port 32401 with queue of 128 connections.
+Feb 18, 2017 15:32:14.213 [0x746462a0] DEBUG - Auth: Refreshing tokens inside the token-based authentication filter.
+Feb 18, 2017 15:32:14.213 [0x731ff400] DEBUG - Auth: Refreshing tokens inside the token-based authentication filter.
+Feb 18, 2017 15:32:14.215 [0x707ff400] DEBUG - File /usr/lib/plexmediaserver/Resources/Plug-ins-b46e0ea changed: -1 => 1485991171.
+Feb 18, 2017 15:32:14.215 [0x707ff400] WARN - Warning: ex: boost::filesystem::last_write_time: No such file or directory: "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins", couldn't check file: /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins
+Feb 18, 2017 15:32:14.215 [0x707ff400] DEBUG - Scanning for plug-ins in /usr/lib/plexmediaserver/Resources/Plug-ins-b46e0ea
+Feb 18, 2017 15:32:14.223 [0x707ff400] DEBUG - Scanning for plug-ins in /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins
+Feb 18, 2017 15:32:14.223 [0x707ff400] DEBUG - Starting plug-in /usr/lib/plexmediaserver/Resources/Plug-ins-b46e0ea/System.bundle.
+Feb 18, 2017 15:32:14.225 [0x707ff400] DEBUG - [com.plexapp.system] Setting plug-in to always running (daemon mode).
+Feb 18, 2017 15:32:14.228 [0x707ff400] DEBUG - Starting file watcher for com.plexapp.system
+Feb 18, 2017 15:32:14.228 [0x707ff400] DEBUG - Plugin: not setting user token for plugin
+Feb 18, 2017 15:32:14.229 [0x707ff400] DEBUG - Spawned plug-in com.plexapp.system with PID 2293
+Feb 18, 2017 15:32:14.230 [0x707ff400] DEBUG - [com.plexapp.system] Sending command: GET /:/prefixes
+Feb 18, 2017 15:32:17.833 [0x746462a0] DEBUG - Shutting down with signal 15
+Feb 18, 2017 15:32:17.834 [0x746462a0] DEBUG - Ordered to stop server.
+Feb 18, 2017 15:32:17.834 [0x746462a0] WARN - Timed out waiting for server to finish.
+Feb 18, 2017 15:32:17.834 [0x746462a0] DEBUG - Killing plug-ins.
+Feb 18, 2017 15:32:17.845 [0x707ff400] ERROR - Timeout or error reading status line from plug-in pipe [com.plexapp.system], we're killing it.
+Feb 18, 2017 15:32:17.845 [0x707ff400] DEBUG - Stopping [com.plexapp.system].
+Feb 18, 2017 15:32:17.845 [0x707ff400] DEBUG - [com.plexapp.system] Killing.
+Feb 18, 2017 15:32:17.845 [0x707ff400] ERROR - Error received reading configuration for com.plexapp.system
+Feb 18, 2017 15:32:17.845 [0x707ff400] DEBUG - Stopping [com.plexapp.system].
+Feb 18, 2017 15:32:17.845 [0x707ff400] DEBUG - Done with 1 synchronous plug-in starts, starting the rest in parallel.
+Feb 18, 2017 15:32:17.888 [0x746462a0] DEBUG - Database: Shutting down.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 0.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 1.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 2.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 3.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 4.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 5.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 6.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 7.
+Feb 18, 2017 15:32:17.889 [0x746462a0] DEBUG - Captured session 8.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 9.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 10.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 11.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 12.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 13.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 14.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 15.
+Feb 18, 2017 15:32:17.890 [0x746462a0] DEBUG - Captured session 16.
+Feb 18, 2017 15:32:17.891 [0x746462a0] DEBUG - Captured session 17.
+Feb 18, 2017 15:32:17.891 [0x746462a0] DEBUG - Captured session 18.
+Feb 18, 2017 15:32:17.891 [0x746462a0] DEBUG - Captured session 19.
+Feb 18, 2017 15:32:18.846 [0x707ff400] WARN - Warning: ex: boost::filesystem::last_write_time: No such file or directory: "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins", couldn't check file: /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins
+Feb 18, 2017 15:32:20.846 [0x707ff400] WARN - Warning: ex: boost::filesystem::last_write_time: No such file or directory: "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins", couldn't check file: /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins

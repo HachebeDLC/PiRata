@@ -1,0 +1,95 @@
+HTTP_HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'}
+RE_JSON = Regex('window\.__INITIAL_STORE__=(\{.+?\});')
+
+####################################################################################################
+def NormalizeURL(url):
+
+	return url.split('#')[0].split('?')[0]
+
+####################################################################################################
+def MetadataObjectForURL(url):
+
+	json_obj = GetJSON(url, type='metadata')
+
+	artist = json_obj['mainArtists'][0]['name']
+	title = json_obj['title']
+	duration = int(float(json_obj['duration']) * 1000)
+	originally_available_at = Datetime.ParseDate(json_obj['releaseDate'].split('T')[0])
+	genres = [genre for genre in json_obj['genres']] if 'genres' in json_obj else []
+	thumb = 'http://%s' % (json_obj['thumbnailUrl'].split('//')[-1])
+
+	return VideoClipObject(
+		title = '%s - %s' % (artist, title),
+		duration = duration,
+		originally_available_at = originally_available_at,
+		genres = genres,
+		thumb = Resource.ContentsOfURLWithFallback(url=thumb)
+	)
+
+####################################################################################################
+def MediaObjectsForURL(url):
+
+	return [
+		MediaObject(
+			parts = [
+				PartObject(key=Callback(PlayVideo, url=url, resolution=resolution))
+			],
+			container = Container.MP4,
+			video_codec = VideoCodec.H264,
+			video_resolution = resolution,
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		) for resolution in ['720', '360']
+	]
+
+####################################################################################################
+@indirect
+def PlayVideo(url, resolution='720', **kwargs):
+
+	json_obj = GetJSON(url, type='streams')
+	video_url_high = None
+	video_url_med = None
+	version_high = 0
+	version_med = 0
+
+	for stream in json_obj:
+
+		if not 'quality' in stream:
+			continue
+
+		if stream['quality'] == 'High' and stream['version'] > version_high:
+			video_url_high = stream['url']
+
+		elif stream['quality'] == 'Med' and stream['version'] > version_med:
+			video_url_med = stream['url']
+
+		else:
+			continue
+
+	if resolution == '720' and video_url_high:
+		video_url = video_url_high
+	elif video_url_med:
+		video_url = video_url_med
+	else:
+		raise Ex.MediaNotAvailable
+
+	return IndirectResponse(VideoClipObject, key='http://%s' % (video_url.split('//')[-1]))
+
+####################################################################################################
+def GetJSON(url, type='metadata'):
+
+	page = HTTP.Request(url).content
+	json = RE_JSON.search(page)
+
+	if not json:
+		raise Ex.MediaNotAvailable
+
+	video_id = url.split('/')[-1]
+
+	json_obj = JSON.ObjectFromString(json.group(1))
+
+	if type == 'streams':
+		return json_obj['default']['streams'][video_id]
+	else:
+		return json_obj['default']['videos'][video_id]

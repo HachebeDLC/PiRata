@@ -1,0 +1,160 @@
+TOKEN_URL = 'http://ida.omroep.nl/npoplayer/i.js'
+STREAM_URL = 'http://ida.omroep.nl/odi/?prid=%s&puboptions=h264_std&adaptive=yes&token=%s'
+RE_TOKEN = Regex('token = "([^"]+)"')
+RE_VARIANTS = Regex('RESOLUTION=\d+x(\d+).*\n(.+\.m3u8)')
+
+HTTP_HEADERS = {
+	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12',
+	'Cookie': 'npo_cc=30'
+}
+
+# Xpath queries for metadata
+XPATH_TITLE = [
+	'//meta[@name="og:title" or @property="og:title"]/@content',
+	'//div[contains(@itemtype, "TVEpisode") or contains(@itemtype, "VideoObject")]//span[@itemprop="name"]/text()',
+	'//div[contains(@itemtype, "TVEpisode") or contains(@itemtype, "VideoObject")]//meta[@itemprop="name"]/@content'
+]
+
+XPATH_SUMMARY = [
+	'//meta[@name="og:description" or @property="og:description"]/@content',
+	'//div[contains(@itemtype, "TVEpisode") or contains(@itemtype, "VideoObject")]//span[@itemprop="description"]/text()',
+	'//div[contains(@itemtype, "TVEpisode") or contains(@itemtype, "VideoObject")]//meta[@itemprop="description"]/@content'
+]
+
+XPATH_THUMB = [
+	'//meta[@name="og:image" or @property="og:image"]/@content',
+	'//img[@class="background-image"]/@src'
+]
+
+XPATH_RELEASE_DATE = [
+	'//meta[@name="og:video:release_date" or @property="og:video:release_date"]/@content',
+	'//div[contains(@itemtype, "TVEpisode")]//span[@itemprop="startDate"]/text()'
+]
+
+XPATH_DURATION = [
+	'//meta[@name="og:video:duration" or @property="og:video:duration"]/@content'
+]
+
+####################################################################################################
+def NormalizeURL(url):
+
+	return url.split('#')[0].split('?')[0]
+
+####################################################################################################
+def MetadataObjectForURL(url):
+
+	try:
+		html = HTML.ElementFromURL(url, headers=HTTP_HEADERS, cacheTime=CACHE_1WEEK)
+	except Ex.HTTPError, e:
+		raise Ex.MediaNotAvailable
+
+	player_id = GetPlayerId(url)
+
+	if not player_id:
+		raise Ex.MediaNotAvailable
+
+	title = html.xpath('|'.join(XPATH_TITLE))[0]
+	summary = html.xpath('|'.join(XPATH_SUMMARY))[0]
+
+	if summary.startswith('Geen omschrijving'):
+		summary = None
+
+	try:
+		thumb = 'http://%s' % (html.xpath('|'.join(XPATH_THUMB))[0].split('?')[0].replace('.png', '.jpg').split('//')[-1])
+	except:
+		thumb = ''
+
+	try:
+		release_date = html.xpath('|'.join(XPATH_RELEASE_DATE))[0].split(' ')[0]
+		originally_available_at = Datetime.ParseDate(release_date).date()
+	except:
+		originally_available_at = None
+
+	try:
+		duration = html.xpath('|'.join(XPATH_DURATION))[0]
+		duration = int(duration) * 1000
+	except:
+		duration = None
+
+	return VideoClipObject(
+		title = title,
+		summary = summary,
+		thumb = Resource.ContentsOfURLWithFallback(url=thumb),
+		originally_available_at = originally_available_at,
+		duration = duration
+	)
+
+####################################################################################################
+def MediaObjectsForURL(url):
+
+	return [
+		MediaObject(
+			parts = [
+				PartObject(key=Callback(PlayVideo, url=url, url=url))
+			],
+			container = Container.MP4,
+			video_codec = VideoCodec.H264,
+			video_resolution = '540',
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		)
+	]
+
+####################################################################################################
+@indirect
+def PlayVideo(url, **kwargs):
+
+	player_id = GetPlayerId(url)
+
+	if not player_id:
+		raise Ex.MediaNotAvailable
+
+	token_data = HTTP.Request(TOKEN_URL, headers=HTTP_HEADERS, cacheTime=0).content
+	token = RE_TOKEN.search(token_data)
+
+	if not token:
+		raise Ex.MediaNotAvailable
+	else:
+		token = SwapToken(token.group(1))
+
+	json = JSON.ObjectFromURL(STREAM_URL % (player_id, token), cacheTime=0)
+	stream = '%s?type=json' % json['streams'][0].split('?')[0]
+
+	try:
+		json = JSON.ObjectFromURL(stream, cacheTime=0)
+		video_url = json['url'].split('?')[0]
+	except:
+		raise Ex.MediaNotAvailable
+
+	return IndirectResponse(VideoClipObject, key=video_url)
+
+####################################################################################################
+def GetPlayerId(url):
+
+	if 'npo.nl' in url:
+		return url.split('/')[-1]
+
+	return None
+
+####################################################################################################
+def SwapToken(token):
+
+	token_l = list(token)
+	first = second = None
+
+	for i in range(5, len(token_l) - 4):
+
+		if token_l[i].isdigit():
+			if first is None:
+				first = i
+			elif second is None:
+				second = i
+
+	if first is None or second is None:
+		first = 12
+		second = 13
+
+	token_l[first], token_l[second] = token_l[second], token_l[first]
+
+	return ''.join(token_l)

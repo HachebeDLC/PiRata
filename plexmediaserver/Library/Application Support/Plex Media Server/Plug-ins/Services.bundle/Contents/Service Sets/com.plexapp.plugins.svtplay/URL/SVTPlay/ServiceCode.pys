@@ -1,0 +1,170 @@
+USER_AGENT = 'AppleCoreMedia/1.0.0.11A501 (iPad; U; CPU OS 7_0_2 like Mac OS X; en_us)'
+RE_CHANNELS = Regex('"schedule" *: *(\[.+\]) *,')
+RE_ID = Regex('video\/([0-9]+)\/?')
+
+####################################################################################################
+def NormalizeURL(url):
+
+    url = url.replace("?start=auto&", "?").replace("?start=auto", "")
+    if 'type=embed' in url:
+        url = url.split('type=embed')[0].strip('&?')
+
+    return url
+
+####################################################################################################
+def MetadataObjectForURL(url):
+ 
+    try:
+        data = GetVideoData(url)
+    except:
+        raise Ex.MediaNotAvailable
+    
+    return EpisodeObject(
+        title = data['title'],
+        summary = data['summary'],
+        show = data['show'],
+        duration = data['duration'],
+        index = data['index'],
+        season = data['season'],
+        thumb = data['thumb'],
+        art = data['art'],
+        originally_available_at = data['date']
+    )
+
+####################################################################################################
+@deferred
+def MediaObjectsForURL(url):
+
+    playlist_url = None
+    
+    try:
+        data = GetVideoData(url)
+    except:
+        raise Ex.MediaNotAvailable
+            
+    for item in data['videoReferences']: 
+        if '.m3u8' in item['url']:
+            playlist_url = item['url']
+            break
+        elif '.f4m' in item['url']:
+            playlist_url = item['url'].replace("/z/", "/i/").replace("manifest.f4m", "master.m3u8")
+
+    if playlist_url:
+        if Client.Platform not in ['iOS', 'Safari', 'tvOS']:
+            # Other clients can't handle the extra parameters in the url
+            # Also add ?null= to fix problems with Samsung client
+            playlist_url = playlist_url.split("?")[0] + '?null='
+                  
+        return [
+            MediaObject(
+                parts = [PartObject(key = HTTPLiveStreamURL(url=playlist_url))],
+                video_resolution = 720,
+                audio_channels = 2,
+                optimized_for_streaming = True
+            )
+        ]
+    else:
+        raise Ex.MediaNotAvailable
+
+####################################################################################################
+def GetVideoData(url):
+    
+    data = {}
+    if '/kanaler' in url:
+        content = HTTP.Request(url, cacheTime=0).content
+        channels = RE_CHANNELS.search(content).groups()[0]
+        json = JSON.ObjectFromString(channels)
+        
+        for channel in json:
+            if channel['title'] in url:
+                break
+
+        data['title'] = channel['schedule'][0]['title']
+        data['summary'] = channel['schedule'][0]['description'] if 'description' in channel['schedule'][0] else None
+        data['show'] = channel['schedule'][0]['programTitle'] if 'programTitle' in channel['schedule'][0] else channel['name']
+        data['duration'] = channel['schedule'][0]['materialLength'] * 1000 if 'materialLength' in channel['schedule'][0] else None
+        data['index'] = channel['schedule'][0]['episodeNumber'] if 'episodeNumber' in channel['schedule'][0] else None
+        data['season'] = channel['schedule'][0]['season'] if 'season' in channel['schedule'][0] else None
+        data['thumb'] = channel['schedule'][0]['titlePage']['thumbnailXLImax'] if 'titlePage' in channel['schedule'][0] else 'http://www.svtplay.se/public/images/channels/posters/%s.png' % channel['title']
+        data['art'] = channel['schedule'][0]['titlePage']['posterXLImax'] if 'titlePage' in channel['schedule'][0] and 'posterXLImax' in channel['schedule'][0]['titlePage'] else None
+        data['date'] = Datetime.Now().date()
+        data['videoReferences'] = channel['videoReferences']
+
+    elif 'svtplay' in url:
+        try:
+            id = RE_ID.search(url).groups()[0]
+        except:
+            page = HTML.ElementFromURL(url)
+            og_url = page.xpath("//meta[@property='og:url']/@content")[0]
+            id = RE_ID.search(og_url).groups()[0]
+        
+        json = JSON.ObjectFromURL('http://www.svt.se/play4api/video/' + id)
+    
+        data['title'] = json['title']
+        data['summary'] = json['description'] if 'description' in json else None
+        data['show'] = json['programTitle'] if 'programTitle' in json else None
+        data['duration'] = json['materialLength'] * 1000 if 'materialLength' in json else None
+        data['index'] = json['episodeNumber'] if 'episodeNumber' in json else None
+        data['season'] = json['season'] if 'season' in json else None
+        data['thumb'] = json['thumbnailXLImax'] if 'thumbnailXLImax' in json else None
+        data['art'] = json['posterXLImax'] if 'posterXLImax' in json else None
+        data['date'] = Datetime.FromTimestamp(json['broadcastDate']/1000).date() if 'broadcastDate' in json else None
+        data['videoReferences'] = json['videoReferences']
+    
+    else:
+        # Öppet arkiv
+        page = HTML.ElementFromURL(url)
+        show = None
+        title = page.xpath('//meta[@property="og:title"]/@content')[0].split(' | ')[0].replace('&amp;', '&')
+        title = String.DecodeHTMLEntities(title)
+    
+        if ' - ' in title:
+            (show, title) = title.split(' - ', 1)
+    
+        summary = page.xpath('//meta[@property="og:description"]/@content')[0].replace('&amp;', '&')
+        summary = String.DecodeHTMLEntities(summary)
+        thumb = page.xpath('//meta[@property="og:image"]/@content')
+    
+        if len(thumb) < 1:
+            thumb = None
+        else:
+            thumb = thumb[0].replace('/small/', '/large/')
+    
+        try:
+            air_date = page.xpath('//div[@class="playBoxConnectedToVideoMain"]//time/@datetime')[0].split('T')[0]
+            air_date = Datetime.ParseDate(air_date).date()
+        except:
+            air_date = None
+    
+        # Airdate for Öppet Arkiv
+        if air_date == None:
+            try:
+                air_date = page.xpath("//span[@class='svt-video-meta']//time/@datetime")[0].split('T')[0]
+                air_date = Datetime.ParseDate(air_date).date()
+            except:
+                air_date = None
+    
+        try:
+            duration = page.xpath("//a[@id='player']/@data-length")
+            duration = int(duration[0]) * 1000
+        except:
+            duration = None
+            pass
+    
+        if "?" in url:
+            json_obj = JSON.ObjectFromURL(url + '&output=json')
+        else:
+            json_obj = JSON.ObjectFromURL(url + '?output=json')
+    
+        data['title'] = title
+        data['summary'] = summary
+        data['show'] = show
+        data['duration'] = duration
+        data['index'] = None
+        data['season'] = None
+        data['thumb'] = thumb
+        data['art'] = None
+        data['date'] = air_date
+        data['videoReferences'] = json_obj['video']['videoReferences']
+        
+    return data

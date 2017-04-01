@@ -1,0 +1,55 @@
+2017-02-18 15:33:35,322 (76fa0000) :  INFO (core:349) - Starting framework core - Version: 2.6.3, Build: b46e0ea (Wed Feb 01 23:19:12 UTC 2017)
+2017-02-18 15:33:35,323 (76fa0000) :  DEBUG (core:361) - Using the elevated policy
+2017-02-18 15:33:35,325 (76fa0000) :  DEBUG (core:450) - Starting runtime component.
+2017-02-18 15:33:35,331 (76fa0000) :  DEBUG (core:450) - Starting caching component.
+2017-02-18 15:33:35,332 (76fa0000) :  DEBUG (core:450) - Starting data component.
+2017-02-18 15:33:35,333 (76fa0000) :  DEBUG (core:450) - Starting networking component.
+2017-02-18 15:33:35,335 (76fa0000) :  DEBUG (networking:288) - No cookie jar found
+2017-02-18 15:33:35,339 (76fa0000) :  DEBUG (networking:452) - Setting the default network timeout to 20.0
+2017-02-18 15:33:35,343 (76fa0000) :  DEBUG (core:450) - Starting localization component.
+2017-02-18 15:33:35,345 (76fa0000) :  INFO (localization:409) - Setting the default locale to en-us
+2017-02-18 15:33:35,347 (76fa0000) :  DEBUG (core:450) - Starting messaging component.
+2017-02-18 15:33:35,349 (76fa0000) :  DEBUG (core:450) - Starting debugging component.
+2017-02-18 15:33:35,351 (76fa0000) :  DEBUG (core:450) - Starting services component.
+2017-02-18 15:33:35,352 (76fa0000) :  DEBUG (core:450) - Starting myplex component.
+2017-02-18 15:33:35,353 (710ff460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/system/messaging/clear_events/com.plexapp.agents.thetvdb'
+2017-02-18 15:33:35,354 (76fa0000) :  DEBUG (core:450) - Starting notifications component.
+2017-02-18 15:33:36,252 (76fa0000) :  DEBUG (accessor:68) - Creating a new model access point for provider com.plexapp.agents.thetvdb in namespace 'metadata'
+2017-02-18 15:33:36,295 (76fa0000) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/resourceHashes'
+2017-02-18 15:33:36,398 (710ff460) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2017-02-18 15:33:36,399 (76fa0000) :  DEBUG (runtime:1117) - Created a thread named 'load_all_services'
+2017-02-18 15:33:36,404 (710ff460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2017-02-18 15:33:36,411 (76fa0000) :  DEBUG (runtime:1117) - Created a thread named 'get_server_info'
+2017-02-18 15:33:36,414 (700bf460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400'
+2017-02-18 15:33:36,417 (76fa0000) :  DEBUG (core:150) - Finished starting framework core
+2017-02-18 15:33:36,419 (76fa0000) :  DEBUG (core:560) - Loading plug-in code
+2017-02-18 15:33:39,299 (76fa0000) :  DEBUG (core:566) - Finished loading plug-in code
+2017-02-18 15:33:39,304 (76fa0000) :  DEBUG (agentkit:1104) - Creating new agent class called TVDBAgent
+2017-02-18 15:33:39,312 (76fa0000) :  DEBUG (agentkit:922) - Updating agent information: [{'media_types': ['TV_Show'], 'accepts_from': None, 'fallback_agent': None, 'contributes_to': None, 'languages': ['en', 'fr', 'zh', 'sv', 'no', 'da', 'fi', 'nl', 'de', 'it', 'es', 'pl', 'hu', 'el', 'tr', 'ru', 'he', 'ja', 'pt', 'cs', 'ko', 'sl', 'hr'], 'persist_stored_files': True, 'version': 0, 'primary_provider': True, 'prefs': True, 'name': 'TheTVDB'}]
+2017-02-18 15:33:39,318 (76fa0000) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0FnZW50U2VydmljZTpVcGRhdGVJbmZv/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQo1CmRpY3QKbGlzdApkaWN0Cmxpc3QKbGlzdAoyCnMyNgpjb20ucGxleGFwcC5hZ2VudHMudGhldHZkYnMxMAppZGVudGlmaWVycjEKczEwCmFnZW50X2luZm8xCnIyCjEwCnIzCnMxMQptZWRpYV90eXBlc25zMTIKYWNjZXB0c19mcm9tbnMxNApmYWxsYmFja19hZ2VudG5zMTQKY29udHJpYnV0ZXNfdG9yNApzOQpsYW5ndWFnZXNiMXMyMApwZXJzaXN0X3N0b3JlZF9maWxlc2kwCnM3CnZlcnNpb25iMXMxNgpwcmltYXJ5X3Byb3ZpZGVyYjFzNQpwcmVmc3M3ClRoZVRWREJzNApuYW1lMQpzNwpUVl9TaG93MjMKczIKZW5zMgpmcnMyCnpoczIKc3ZzMgpub3MyCmRhczIKZmlzMgpubHMyCmRlczIKaXRzMgplc3MyCnBsczIKaHVzMgplbHMyCnRyczIKcnVzMgpoZXMyCmphczIKcHRzMgpjc3MyCmtvczIKc2xzMgpocnIwCg__'
+2017-02-18 15:33:39,336 (710ff460) :  DEBUG (services:362) - Loaded services
+2017-02-18 15:33:39,339 (700bf460) :  DEBUG (core:538) - Machine identifier is 7cd1ef95577efcb35df501e87fca196e553f4784
+2017-02-18 15:33:39,371 (708bf460) :  DEBUG (services:438) - No shared code to load
+2017-02-18 15:33:39,372 (700bf460) :  DEBUG (core:539) - Server version is 1.3.4.3285-b46e0ea
+2017-02-18 15:33:39,383 (76fa0000) :  INFO (core:611) - Started plug-in
+2017-02-18 15:33:39,385 (76fa0000) :  DEBUG (socketinterface:160) - Starting socket server
+2017-02-18 15:33:39,388 (76fa0000) :  DEBUG (runtime:1117) - Created a thread named 'start'
+2017-02-18 15:33:39,390 (76fa0000) :  INFO (socketinterface:184) - Socket server started on port 41219
+2017-02-18 15:33:39,391 (76fa0000) :  INFO (pipeinterface:25) - Entering run loop
+2017-02-18 15:33:39,393 (76fa0000) :  DEBUG (runtime:717) - Handling request GET /:/prefixes
+2017-02-18 15:33:39,402 (76fa0000) :  DEBUG (runtime:814) - Found route matching /:/prefixes
+2017-02-18 15:33:39,406 (76fa0000) :  DEBUG (runtime:924) - Response: [200] MediaContainer, 151 bytes
+2017-02-18 15:38:43,791 (708bf460) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.thetvdb/reloadServices
+2017-02-18 15:38:43,877 (708bf460) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.thetvdb/reloadServices
+2017-02-18 15:38:43,879 (708bf460) :  DEBUG (services:15) - Reloading services
+2017-02-18 15:38:43,880 (708bf460) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2017-02-18 15:38:43,883 (708bf460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2017-02-18 15:38:44,600 (708bf460) :  DEBUG (services:362) - Loaded services
+2017-02-18 15:38:44,604 (708bf460) :  DEBUG (runtime:924) - Response: [200] bool, 0 bytes
+2017-02-18 15:38:48,959 (708bf460) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.thetvdb/reloadServices
+2017-02-18 15:38:48,963 (708bf460) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.thetvdb/reloadServices
+2017-02-18 15:38:48,965 (708bf460) :  DEBUG (services:15) - Reloading services
+2017-02-18 15:38:48,967 (708bf460) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2017-02-18 15:38:48,970 (708bf460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2017-02-18 15:38:49,692 (708bf460) :  DEBUG (services:362) - Loaded services
+2017-02-18 15:38:49,695 (708bf460) :  DEBUG (runtime:924) - Response: [200] bool, 0 bytes

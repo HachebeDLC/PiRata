@@ -1,0 +1,65 @@
+2017-02-18 15:33:52,842 (76f36000) :  INFO (core:349) - Starting framework core - Version: 2.6.3, Build: b46e0ea (Wed Feb 01 23:19:12 UTC 2017)
+2017-02-18 15:33:52,844 (76f36000) :  DEBUG (core:361) - Using the elevated policy
+2017-02-18 15:33:52,845 (76f36000) :  DEBUG (core:450) - Starting runtime component.
+2017-02-18 15:33:52,850 (76f36000) :  DEBUG (core:450) - Starting caching component.
+2017-02-18 15:33:52,851 (76f36000) :  DEBUG (core:450) - Starting data component.
+2017-02-18 15:33:52,852 (76f36000) :  DEBUG (core:450) - Starting networking component.
+2017-02-18 15:33:52,855 (76f36000) :  DEBUG (networking:284) - Loaded HTTP cookies
+2017-02-18 15:33:52,856 (76f36000) :  DEBUG (caching:108) - No info file found, trashing the cache folder
+2017-02-18 15:33:52,863 (76f36000) :  DEBUG (networking:452) - Setting the default network timeout to 20.0
+2017-02-18 15:33:52,867 (76f36000) :  DEBUG (core:450) - Starting localization component.
+2017-02-18 15:33:52,869 (76f36000) :  INFO (localization:409) - Setting the default locale to en-us
+2017-02-18 15:33:52,870 (76f36000) :  DEBUG (core:450) - Starting messaging component.
+2017-02-18 15:33:52,872 (76f36000) :  DEBUG (core:450) - Starting debugging component.
+2017-02-18 15:33:52,873 (76f36000) :  DEBUG (core:450) - Starting services component.
+2017-02-18 15:33:52,874 (76f36000) :  DEBUG (core:450) - Starting myplex component.
+2017-02-18 15:33:52,875 (710ff460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/system/messaging/clear_events/com.plexapp.agents.imdb'
+2017-02-18 15:33:52,876 (76f36000) :  DEBUG (core:450) - Starting notifications component.
+2017-02-18 15:33:53,737 (76f36000) :  DEBUG (accessor:68) - Creating a new model access point for provider com.plexapp.agents.imdb in namespace 'metadata'
+2017-02-18 15:33:53,768 (76f36000) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/resourceHashes'
+2017-02-18 15:33:53,854 (710ff460) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2017-02-18 15:33:53,855 (76f36000) :  DEBUG (runtime:1117) - Created a thread named 'load_all_services'
+2017-02-18 15:33:53,859 (710ff460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2017-02-18 15:33:53,865 (76f36000) :  DEBUG (runtime:1117) - Created a thread named 'get_server_info'
+2017-02-18 15:33:53,867 (76f36000) :  DEBUG (core:150) - Finished starting framework core
+2017-02-18 15:33:53,868 (76f36000) :  DEBUG (core:560) - Loading plug-in code
+2017-02-18 15:33:53,870 (7003f460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400'
+2017-02-18 15:33:57,295 (76f36000) :  DEBUG (core:566) - Finished loading plug-in code
+2017-02-18 15:33:58,291 (76f36000) :  DEBUG (agentkit:1104) - Creating new agent class called PlexMovieAgent
+2017-02-18 15:33:58,302 (76f36000) :  DEBUG (agentkit:922) - Updating agent information: [{'media_types': ['Movie'], 'accepts_from': ['com.plexapp.agents.localmedia'], 'fallback_agent': None, 'contributes_to': ['com.plexapp.agents.themoviedb'], 'languages': ['en', 'sv', 'fr', 'es', 'nl', 'de', 'it', 'da', 'ar', 'ca', 'zh', 'cs', 'et', 'fi', 'el', 'he', 'hi', 'hu', 'id', 'ja', 'ko', 'lv', 'no', 'fa', 'pl', 'pt', 'ro', 'ru', 'sk', 'th', 'tr', 'uk', 'vi'], 'persist_stored_files': True, 'version': 0, 'primary_provider': True, 'prefs': True, 'name': 'Plex Movie'}]
+2017-02-18 15:33:58,309 (7003f460) :  DEBUG (core:538) - Machine identifier is 7cd1ef95577efcb35df501e87fca196e553f4784
+2017-02-18 15:33:58,311 (7003f460) :  DEBUG (core:539) - Server version is 1.3.4.3285-b46e0ea
+2017-02-18 15:33:58,312 (76f36000) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0FnZW50U2VydmljZTpVcGRhdGVJbmZv/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQo3CmRpY3QKbGlzdApkaWN0Cmxpc3QKbGlzdApsaXN0Cmxpc3QKMgpzMjMKY29tLnBsZXhhcHAuYWdlbnRzLmltZGJzMTAKaWRlbnRpZmllcnIxCnMxMAphZ2VudF9pbmZvMQpyMgoxMApyMwpzMTEKbWVkaWFfdHlwZXNyNApzMTIKYWNjZXB0c19mcm9tbnMxNApmYWxsYmFja19hZ2VudHI1CnMxNApjb250cmlidXRlc190b3I2CnM5Cmxhbmd1YWdlc2IxczIwCnBlcnNpc3Rfc3RvcmVkX2ZpbGVzaTAKczcKdmVyc2lvbmIxczE2CnByaW1hcnlfcHJvdmlkZXJiMXM1CnByZWZzczEwClBsZXggTW92aWVzNApuYW1lMQpzNQpNb3ZpZTEKczI5CmNvbS5wbGV4YXBwLmFnZW50cy5sb2NhbG1lZGlhMQpzMjkKY29tLnBsZXhhcHAuYWdlbnRzLnRoZW1vdmllZGIzMwpzMgplbnMyCnN2czIKZnJzMgplc3MyCm5sczIKZGVzMgppdHMyCmRhczIKYXJzMgpjYXMyCnpoczIKY3NzMgpldHMyCmZpczIKZWxzMgpoZXMyCmhpczIKaHVzMgppZHMyCmphczIKa29zMgpsdnMyCm5vczIKZmFzMgpwbHMyCnB0czIKcm9zMgpydXMyCnNrczIKdGhzMgp0cnMyCnVrczIKdmlyMAo_'
+2017-02-18 15:33:58,325 (710ff460) :  DEBUG (services:362) - Loaded services
+2017-02-18 15:33:58,352 (7083f460) :  DEBUG (services:438) - No shared code to load
+2017-02-18 15:33:58,358 (76f36000) :  INFO (core:611) - Started plug-in
+2017-02-18 15:33:58,360 (76f36000) :  DEBUG (socketinterface:160) - Starting socket server
+2017-02-18 15:33:58,363 (76f36000) :  DEBUG (runtime:1117) - Created a thread named 'start'
+2017-02-18 15:33:58,364 (76f36000) :  INFO (socketinterface:184) - Socket server started on port 36861
+2017-02-18 15:33:58,365 (76f36000) :  INFO (pipeinterface:25) - Entering run loop
+2017-02-18 15:33:58,366 (76f36000) :  DEBUG (runtime:717) - Handling request GET /:/prefixes
+2017-02-18 15:33:58,376 (76f36000) :  DEBUG (runtime:814) - Found route matching /:/prefixes
+2017-02-18 15:33:58,380 (76f36000) :  DEBUG (runtime:924) - Response: [200] MediaContainer, 148 bytes
+2017-02-18 15:33:58,396 (710ff460) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/prefs
+2017-02-18 15:33:58,476 (710ff460) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/prefs
+2017-02-18 15:33:58,479 (7003f460) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/prefs
+2017-02-18 15:33:58,485 (7003f460) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/prefs
+2017-02-18 15:33:58,487 (710ff460) :  DEBUG (preferences:258) - Loaded preferences from DefaultPrefs.json
+2017-02-18 15:33:58,489 (710ff460) :  INFO (preferences:161) - No user preferences file exists
+2017-02-18 15:33:58,492 (710ff460) :  DEBUG (preferences:198) - Saved the user preferences
+2017-02-18 15:33:58,537 (710ff460) :  DEBUG (runtime:924) - Response: [200] MediaContainer, 2214 bytes
+2017-02-18 15:33:58,548 (7003f460) :  DEBUG (runtime:924) - Response: [200] MediaContainer, 2214 bytes
+2017-02-18 15:38:40,407 (7003f460) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/reloadServices
+2017-02-18 15:38:40,411 (7003f460) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/reloadServices
+2017-02-18 15:38:40,412 (7003f460) :  DEBUG (services:15) - Reloading services
+2017-02-18 15:38:40,414 (7003f460) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2017-02-18 15:38:40,416 (7003f460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2017-02-18 15:38:41,144 (7003f460) :  DEBUG (services:362) - Loaded services
+2017-02-18 15:38:41,147 (7003f460) :  DEBUG (runtime:924) - Response: [200] bool, 0 bytes
+2017-02-18 15:38:45,908 (7003f460) :  DEBUG (runtime:717) - Handling request GET /:/plugins/com.plexapp.agents.imdb/reloadServices
+2017-02-18 15:38:45,912 (7003f460) :  DEBUG (runtime:814) - Found route matching /:/plugins/com.plexapp.agents.imdb/reloadServices
+2017-02-18 15:38:45,913 (7003f460) :  DEBUG (services:15) - Reloading services
+2017-02-18 15:38:45,915 (7003f460) :  DEBUG (services:265) - Plug-in is not daemonized - loading services from system
+2017-02-18 15:38:45,918 (7003f460) :  DEBUG (networking:166) - Requesting 'http://127.0.0.1:32400/:/plugins/com.plexapp.system/messaging/function/X0J1bmRsZVNlcnZpY2U6QWxsU2VydmljZXM_/Y2VyZWFsMQoxCmxpc3QKMApyMAo_/Y2VyZWFsMQoxCmRpY3QKMApyMAo_'
+2017-02-18 15:38:46,648 (7003f460) :  DEBUG (services:362) - Loaded services
+2017-02-18 15:38:46,652 (7003f460) :  DEBUG (runtime:924) - Response: [200] bool, 0 bytes

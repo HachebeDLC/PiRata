@@ -1,0 +1,63 @@
+Feb 18, 2017 15:33:15.374 [0x753c5410] INFO - Plex DLNA Server v1.3.4.3285-b46e0ea - annapurnatrans PC arm7 - build: linux-annapurnatrans-arm7 - GMT 01:00
+Feb 18, 2017 15:33:15.375 [0x753c5410] INFO - Linux version: 4.4.32v7-aufs (#1 SMP Fri Nov 18 23:17:35 CET 2016), language: es-ES@euro
+Feb 18, 2017 15:33:15.375 [0x753c5410] INFO - Processor Arm
+Feb 18, 2017 15:33:15.373 [0x7542f240] DEBUG - Unique device name = 7cd1ef95-577e-fcb3-5df5-01e87fca196e
+Feb 18, 2017 15:33:15.373 [0x7542f240] DEBUG - DLNA server port: 32469
+Feb 18, 2017 15:33:15.373 [0x7542f240] DEBUG - PMS: http://127.0.0.1:32400/
+Feb 18, 2017 15:33:15.374 [0x7542f240] DEBUG - MyPlex: https://plex.tv/
+Feb 18, 2017 15:33:15.451 [0x7542f240] DEBUG - Loading com.plexapp.dlna is complete (success=1)
+Feb 18, 2017 15:33:15.484 [0x7542f240] ERROR - Couldn't rename file /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna-new.db-shm to /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna.db-shm: No such file or directory
+Feb 18, 2017 15:33:15.485 [0x7542f240] ERROR - Couldn't rename file /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna-new.db-wal to /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.dlna.db-wal: No such file or directory
+Feb 18, 2017 15:33:15.530 [0x7542f240] DEBUG - Reading system DLNA client profiles
+Feb 18, 2017 15:33:15.789 [0x7542f240] DEBUG - Read 22 DLNA client profiles
+Feb 18, 2017 15:33:15.811 [0x7542f240] DEBUG - [PERF] Slowest insertShortKey in 10.000000 ms.
+Feb 18, 2017 15:33:15.833 [0x7542f240] DEBUG - DLNA device discovery enabled every 60 seconds
+Feb 18, 2017 15:33:15.842 [0x7542f240] DEBUG - Initialization complete
+Feb 18, 2017 15:33:16.349 [0x6dbff410] DEBUG - GET for http://192.168.1.35:32469/proxy/027d672c6a70ab72aa7c/260x260.png
+Feb 18, 2017 15:33:16.349 [0x6dbff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:16.564 [0x6dbff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?format=png&height=260&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Epng&width=260: HTTP/1.1 200
+Feb 18, 2017 15:33:16.564 [0x6dbff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:16.573 [0x6dbff410] DEBUG - GET for http://192.168.1.35:32469/proxy/74b2fce849107951c424/120x120.png
+Feb 18, 2017 15:33:16.574 [0x6dbff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:16.636 [0x6dbff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?format=png&height=120&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Epng&width=120: HTTP/1.1 200
+Feb 18, 2017 15:33:16.636 [0x6dbff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:16.640 [0x6dbff410] DEBUG - GET for http://192.168.1.35:32469/proxy/23b1739a6c33d02bf0ba/48x48.png
+Feb 18, 2017 15:33:16.641 [0x6dbff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:16.673 [0x6dbff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?format=png&height=48&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Epng&width=48: HTTP/1.1 200
+Feb 18, 2017 15:33:16.674 [0x6dbff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:16.676 [0x6dbff410] DEBUG - GET for http://192.168.1.35:32469/proxy/e2ba69ed701bbef38438/260x260.jpg
+Feb 18, 2017 15:33:16.676 [0x6dbff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:16.716 [0x6dbff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?chromaSubsampling=4%3A2%3A2&format=jpg&height=260&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Ejpg&width=260: HTTP/1.1 200
+Feb 18, 2017 15:33:16.716 [0x6dbff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:16.723 [0x6dbff410] DEBUG - GET for http://192.168.1.35:32469/proxy/ae306aa36533cd3e14b4/120x120.jpg
+Feb 18, 2017 15:33:16.723 [0x6dbff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:16.759 [0x6dbff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?chromaSubsampling=4%3A2%3A2&format=jpg&height=120&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Ejpg&width=120: HTTP/1.1 200
+Feb 18, 2017 15:33:16.759 [0x6dbff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:16.764 [0x6dbff410] DEBUG - GET for http://192.168.1.35:32469/proxy/f5095c764513b3c19c6b/48x48.jpg
+Feb 18, 2017 15:33:16.765 [0x6dbff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:16.783 [0x6dbff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?chromaSubsampling=4%3A2%3A2&format=jpg&height=48&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Ejpg&width=48: HTTP/1.1 200
+Feb 18, 2017 15:33:16.783 [0x6dbff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:19.709 [0x6f5ff410] DEBUG - GET for http://192.168.1.35:32469/proxy/027d672c6a70ab72aa7c/260x260.png
+Feb 18, 2017 15:33:19.709 [0x6f5ff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:19.716 [0x6f5ff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?format=png&height=260&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Epng&width=260: HTTP/1.1 200
+Feb 18, 2017 15:33:19.716 [0x6f5ff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:19.725 [0x6f5ff410] DEBUG - GET for http://192.168.1.35:32469/proxy/74b2fce849107951c424/120x120.png
+Feb 18, 2017 15:33:19.726 [0x6f5ff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:19.734 [0x6f5ff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?format=png&height=120&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Epng&width=120: HTTP/1.1 200
+Feb 18, 2017 15:33:19.734 [0x6f5ff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:19.772 [0x6f5ff410] DEBUG - GET for http://192.168.1.35:32469/proxy/23b1739a6c33d02bf0ba/48x48.png
+Feb 18, 2017 15:33:19.772 [0x6f5ff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:19.781 [0x6f5ff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?format=png&height=48&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Epng&width=48: HTTP/1.1 200
+Feb 18, 2017 15:33:19.781 [0x6f5ff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:19.821 [0x6f5ff410] DEBUG - GET for http://192.168.1.35:32469/proxy/e2ba69ed701bbef38438/260x260.jpg
+Feb 18, 2017 15:33:19.822 [0x6f5ff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:19.832 [0x6f5ff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?chromaSubsampling=4%3A2%3A2&format=jpg&height=260&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Ejpg&width=260: HTTP/1.1 200
+Feb 18, 2017 15:33:19.832 [0x6f5ff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:19.873 [0x6f5ff410] DEBUG - GET for http://192.168.1.35:32469/proxy/ae306aa36533cd3e14b4/120x120.jpg
+Feb 18, 2017 15:33:19.873 [0x6f5ff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:19.882 [0x6f5ff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?chromaSubsampling=4%3A2%3A2&format=jpg&height=120&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Ejpg&width=120: HTTP/1.1 200
+Feb 18, 2017 15:33:19.884 [0x6f5ff410] DEBUG - Responding HTTP/1.1 200
+Feb 18, 2017 15:33:19.921 [0x6f5ff410] DEBUG - GET for http://192.168.1.35:32469/proxy/f5095c764513b3c19c6b/48x48.jpg
+Feb 18, 2017 15:33:19.921 [0x6f5ff410] DEBUG - Mapped client to generic profile: Connection: Keep-Alive; User-Agent: User-Agent: Microsoft-DLNA DLNADOC/1.50; Host: 192.168.1.35:32469
+Feb 18, 2017 15:33:19.930 [0x6f5ff410] DEBUG - Proxied GET to http://127.0.0.1:32400/photo/:/transcode?chromaSubsampling=4%3A2%3A2&format=jpg&height=48&url=http%3A%2F%2F127%2E0%2E0%2E1%3A32400%2F%3A%2Fresources%2Fdlna-icon-260%2Ejpg&width=48: HTTP/1.1 200
+Feb 18, 2017 15:33:19.931 [0x6f5ff410] DEBUG - Responding HTTP/1.1 200

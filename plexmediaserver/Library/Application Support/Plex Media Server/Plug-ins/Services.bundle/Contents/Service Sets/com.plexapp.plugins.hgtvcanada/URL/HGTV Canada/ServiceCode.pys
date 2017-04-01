@@ -1,0 +1,110 @@
+FEED_URL = 'http://feed.theplatform.com/f/dtjsEC/EAlt6FfQ_kCX?byContent=byReleases%3DbyPid%253D'
+RE_PID = Regex('pid: *"(.*)",')
+
+#########################################################################################
+def MetadataObjectForURL(url):
+
+    pid = GetPID(url)
+
+    if not pid:
+        raise Ex.MediaNotAvailable
+
+    data = JSON.ObjectFromURL(FEED_URL + pid + '&form=json')
+    entry = data['entries'][0] 
+
+    title = entry['title']
+    summary = entry['description'] if 'description' in entry else None
+    thumb = entry['plmedia$defaultThumbnailUrl'] if 'plmedia$defaultThumbnailUrl' in entry else None
+    show = entry['pl1$show'] if 'pl1$show' in entry else None
+    season = int(entry['pl1$season']) if 'pl1$season' in entry and entry['pl1$season'] != "Special" else None
+    index = int(entry['pl1$episode']) if 'pl1$episode' in entry else None
+    originally_available_at = Datetime.FromTimestamp(entry['pubDate'] / 1000).date() if 'pubDate' in entry else None
+
+    duration = None
+
+    if 'media$content' in entry:
+
+        if 'plfile$duration' in entry['media$content'][0]:
+            duration = int(float(entry['media$content'][0]['plfile$duration']) * 1000)
+
+    if show and season and index:
+
+        return EpisodeObject(
+            title = title,
+            summary = summary,
+            thumb = thumb,
+            show = show,
+            season = season,
+            index = index,
+            originally_available_at = originally_available_at,
+            duration = duration
+        )
+
+    else:
+
+        return VideoClipObject(
+            title = title,
+            summary = summary,
+            thumb = thumb,
+            originally_available_at = originally_available_at,
+            duration = duration
+        )
+    
+#########################################################################################
+@deferred
+def MediaObjectsForURL(url):
+
+    pid = GetPID(url)
+
+    if not pid:
+        raise Ex.MediaNotAvailable
+
+    data = JSON.ObjectFromURL(FEED_URL + pid + '&form=json')
+    entry = data['entries'][0]  
+
+    for item in entry['media$content']:
+
+        if not 'f4m' in item['plfile$url']:
+            continue
+
+        data = HTML.ElementFromURL(item['plfile$url'].replace('f4m', 'm3u'))
+
+        try:
+            video_url = data.xpath('//video/@src')[0]
+        except:
+            if 'GeoLocationBlocked' in HTML.StringFromElement(data):
+                raise Ex.MediaGeoblocked
+
+        return [
+            MediaObject(
+                video_resolution = int(item['plfile$height']),
+                audio_channels = int(item['plfile$audioChannels']),
+                bitrate = int(item['plfile$bitrate'] / 100),
+                duration = int(item['plfile$duration'] * 1000),
+                video_frame_rate = int(item['plfile$frameRate']),
+                parts = [
+                    PartObject(key=HTTPLiveStreamURL(Callback(PlayVideo, url=video_url)))
+                ]
+            )
+        ]
+
+##########################################################################################
+def PlayVideo(url, **kwargs):
+
+    playlist = HTTP.Request(url).content
+    return playlist
+
+##########################################################################################
+def GetPID(url):
+
+    html = HTML.ElementFromURL(url)
+    pid = None
+
+    for text in html.xpath('//script[@type="text/javascript"]/text()'):
+        match = RE_PID.search(text)
+
+        if match:
+            pid = match.groups()[0]
+
+    return pid
+

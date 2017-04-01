@@ -1,0 +1,124 @@
+RE_VIDEO_URL = Regex('var videoUrl = "([^"]+)')
+
+####################################################################################################
+def NormalizeURL(url):
+
+	if 'widgets.ign.com' in url and '?url=' in url:
+		url = String.Unquote(url.split('?url=')[-1])
+	elif not '/videos/' in url:
+		page = HTTP.Request(url).content
+		video_url = RE_VIDEO_URL.search(page)
+
+		if video_url:
+			return video_url.group(1)
+
+	return url.split('?')[0]
+
+####################################################################################################
+def MetadataObjectForURL(url):
+
+	html = HTML.ElementFromURL(url)
+
+	title = html.xpath('//meta[@property="og:title"]/@content')[0].split(' - ')[0]
+	summary = html.xpath('//meta[@property="og:description"]/@content')[0]
+	thumb = html.xpath('//meta[@property="og:image"]/@content')[0]
+
+	try:
+		duration = html.xpath('//span[@class="video-duration"]/text()')[0].strip()
+		duration = Datetime.MillisecondsFromString(duration)
+	except:
+		duration = None
+
+	try:
+		date = html.xpath('//div[@class="sub-details"]/text()')[0].strip()
+		originally_available_at = Datetime.ParseDate(date).date()
+	except:
+		originally_available_at = None
+
+	return VideoClipObject(
+		title = title,
+		summary = summary,
+		thumb = Resource.ContentsOfURLWithFallback(thumb),
+		duration = duration,
+		originally_available_at = originally_available_at
+	)
+
+####################################################################################################
+def MediaObjectsForURL(url):
+
+	return [
+		MediaObject(
+			parts = [PartObject(key=Callback(PlayVideo, url=url, bitrate=8000000))],
+			container = Container.MP4,
+			video_resolution = '1080',
+			#aspect_ratio = '1.78',
+			bitrate = 8000,
+			video_codec = VideoCodec.H264,
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		),
+		MediaObject(
+			parts = [PartObject(key=Callback(PlayVideo, url=url, bitrate=4000000))],
+			container = Container.MP4,
+			video_resolution = '720',
+			#aspect_ratio = '1.78',
+			bitrate = 4000,
+			video_codec = VideoCodec.H264,
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		),
+		MediaObject(
+			parts = [PartObject(key=Callback(PlayVideo, url=url, bitrate=2500000))],
+			container = Container.MP4,
+			video_resolution = '540',
+			#aspect_ratio = '1.78',
+			bitrate = 2500,
+			video_codec = VideoCodec.H264,
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		),
+		MediaObject(
+			parts = [PartObject(key=Callback(PlayVideo, url=url, bitrate=600000))],
+			container = Container.MP4,
+			video_resolution = '360',
+			#aspect_ratio = '1.78',
+			bitrate = 600,
+			video_codec = VideoCodec.H264,
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		)
+	]
+
+####################################################################################################
+@indirect
+def PlayVideo(url, bitrate, **kwargs):
+
+	url = URLService.NormalizeURL(url)
+	html = HTML.ElementFromURL(url)
+
+	json = html.xpath('//div[contains(@id, "video-player") and @data-video]/@data-video')
+
+	if len(json) < 1:
+		raise Ex.MediaNotAvailable
+
+	json_obj = JSON.ObjectFromString(json[0])
+	available_bitrates = []
+
+	for video in json_obj['assets']:
+		available_bitrates.append(video['bitrate'])
+
+	if len(available_bitrates) < 1:
+		raise Ex.MediaNotAvailable
+
+	Log(available_bitrates)
+	closest = min((abs(bitrate - i), i) for i in available_bitrates)[1]
+
+	for video in json_obj['assets']:
+		if video['bitrate'] == closest:
+			return IndirectResponse(VideoClipObject, key=video['url'])
+
+	raise Ex.MediaNotAvailable

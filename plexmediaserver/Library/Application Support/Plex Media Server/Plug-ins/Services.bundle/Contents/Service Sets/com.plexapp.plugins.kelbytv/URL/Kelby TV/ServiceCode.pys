@@ -1,0 +1,77 @@
+BASE_URL = 'http://kelbytv.com'
+RE_EP_INDEX = Regex('Episode (?P<ep_index>[0-9]+)')
+RE_CLEANUP = Regex('[^-a-z0-9 ]')
+RE_VIDEO_URL = Regex('file\s*:\s*(?:"|\')([^"\']+\.mp4)')
+
+####################################################################################################
+def MetadataObjectForURL(url):
+
+	try:
+		page = HTML.ElementFromURL(url)
+	except Ex.HTTPError, e:
+		if e.code == 404:
+			raise Ex.MediaNotAvailable
+		if e.code == 410:
+			raise Ex.MediaExpired
+
+	show = page.xpath('//title')[0].text.rsplit(' | ', 1)[1].strip()
+	episode_title = page.xpath('//h2[@class="episodetitle"]/span/text()')[0]
+	summary = page.xpath('//div[contains(@class, "showinfo")]//div[@class="quickabout"]//strong')[0].text.strip()
+	thumb = page.xpath('//video[@id="player"]')[0].get('poster')
+	if thumb.startswith('http') == False:
+		thumb = BASE_URL + thumb
+
+	try:
+		index = int(RE_EPISODE.search(episode_title).group('ep_index'))
+	except:
+		index = None
+
+	published = page.xpath('//div[contains(@class, "showinfo")]/p[@class="meta"]/text()')[0].strip('Published:').strip()
+	originally_available_at = Datetime.ParseDate(published)
+
+	return EpisodeObject(
+		show = show,
+		title = episode_title,
+		index = index,
+		summary = summary,
+		originally_available_at = originally_available_at,
+		thumb = Resource.ContentsOfURLWithFallback(url=thumb)
+	)
+
+####################################################################################################
+def MediaObjectsForURL(url):
+
+	return [
+		MediaObject(
+			parts = [PartObject(key=Callback(PlayVideo, url=url, res='720'))],
+			container = Container.MP4,
+			video_codec = VideoCodec.H264,
+			video_resolution = '720',
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		),
+		MediaObject(
+			parts = [PartObject(key=Callback(PlayVideo, url=url, res='480'))],
+			container = Container.MP4,
+			video_codec = VideoCodec.H264,
+			video_resolution = '480',
+			audio_codec = AudioCodec.AAC,
+			audio_channels = 2,
+			optimized_for_streaming = True
+		)
+	]
+
+####################################################################################################
+@indirect
+def PlayVideo(url, res='720', **kwargs):
+
+	data = HTTP.Request(url).content
+	video = RE_VIDEO_URL.findall(data)
+
+	for url in video:
+
+		if '_hd' in url and res == '720':
+			return IndirectResponse(VideoClipObject, key=url)
+
+	return IndirectResponse(VideoClipObject, key=video[0])
