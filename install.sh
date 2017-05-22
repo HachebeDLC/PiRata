@@ -7,5 +7,10 @@ sudo apt-get update  ;
 sudo apt-get install -t jessie plexmediaserver deluged deluge-console deluge-web nginx -y  ;
 echo pi:Hochobo:10 >> ~/.config/deluge/auth
 sudo git clone http://github.com/RuudBurger/CouchPotatoServer.git
+sudo cp CouchPotatoServer/init/ubuntu /etc/init.d/couchpotato
+sudo nano /etc/init.d/couchpotato
+sudo chmod +x /etc/init.d/couchpotato
+sudo update-rc.d couchpotato defaults
 sudo apt-get update
 sudo apt-get install nzbdrone 
+sudo cp deluged.service /etc/systemd/system/deluged.service
